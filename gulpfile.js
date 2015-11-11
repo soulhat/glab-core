@@ -1,7 +1,14 @@
-var gulp = require('gulp');
+'use strict';
 
-gulp.task('default', function() {
-    // 将你的默认的任务代码放在这
-});/**
- * Created by Bin on 10/21/15.
- */
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+    gulp.watch("*.html").on('change', browserSync.reload);
+});
+gulp.task('default', ['browser-sync']);
