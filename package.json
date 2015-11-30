@@ -4,7 +4,7 @@
   "description": "just a personal web",
   "main": "app.js",
   "scripts": {
-    "test": "mocha test",
+    "test": "make test-all",
     "start": "node ./bin/www"
   },
   "repository": {
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/glabcn/glab-core/issues"
   },
-  "contributors": "https://github.com/glabcn/glab-core/graphs/contributors",
+  "contributors": ["https://github.com/glabcn/glab-core/graphs/contributors"],
   "homepage": "http://www.glab.cn",
   "engines": {
     "node": ">= 0.10.0"
