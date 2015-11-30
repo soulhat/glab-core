@@ -4,5 +4,14 @@
 
 #### 使用的第三方NPM包
 ##### 模版扩展
-[consolidate](https://github.com/visionmedia/consolidate.js)
-[handlebars](http://handlebarsjs.com)
+- [consolidate](https://github.com/visionmedia/consolidate.js)
+- [handlebars](http://handlebarsjs.com)
+##### Promise
+- [bluebird](http://bluebirdjs.com)
+##### js函数库
+- [lodash](https://lodash.com)
+- [jquery](http://jquery.com)
+##### MongoDB
+- [mongoose](http://mongoosejs.com)
+##### 日志
+- [winston](https://github.com/winstonjs/winston)
