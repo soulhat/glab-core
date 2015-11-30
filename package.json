@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "bluebird": "^3.0.5",
+    "consolidate": "^0.13.1",
     "express": "^4.13.3",
     "handlebars": "^4.0.4",
     "lodash": "^3.10.1",
