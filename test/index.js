@@ -1,3 +1,12 @@
-/**
- * Created by Bin on 11/19/15.
- */
+var assert = require('assert');
+var should = require('should');
+var lib = require('../lib/lib');
+var Promise = require("bluebird");
+require('should-promised');
+var fs = require('fs');
+var muk = require('muk');
+var rewire = require("rewire");
+var express = require("express");
+var request = require("supertest");
+
+var app = express();

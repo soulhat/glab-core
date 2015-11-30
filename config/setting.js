@@ -1,3 +1,6 @@
-/**
- * Created by Bin on 11/19/15.
- */
+module.exports = {
+    cookieSecret: 'myblog',
+    db: 'blog',
+    host: 'localhost',
+    port: 27017
+};

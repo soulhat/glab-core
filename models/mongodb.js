@@ -1,3 +1,3 @@
-/**
- * Created by Bin on 11/16/15.
- */
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/glab');
+exports.mongoose = mongoose;

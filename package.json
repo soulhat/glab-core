@@ -1,0 +1,54 @@
+{
+  "name": "glab",
+  "version": "0.0.1",
+  "description": "just a personal web",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glabcn/glab-core.git"
+  },
+  "keywords": [
+    "glab",
+    "study",
+    "navigation"
+  ],
+  "author": "Glab Foundation <liubin@glab.cn>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glabcn/glab-core/issues"
+  },
+  "contributors": "https://github.com/glabcn/glab-core/graphs/contributors",
+  "homepage": "http://www.glab.cn",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "bower": "^1.6.5",
+    "browser-sync": "^2.9.11",
+    "debug": "^2.2.0",
+    "faker": "^3.0.1",
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.2.0",
+    "istanbul": "^0.4.0",
+    "muk": "^0.4.0",
+    "rewire": "^2.5.0",
+    "should": "^7.1.1",
+    "should-promised": "^0.3.1",
+    "supertest": "^1.1.0",
+    "supervisor": "^0.9.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "express": "^4.13.3",
+    "handlebars": "^4.0.4",
+    "lodash": "^3.10.1",
+    "mongodb": "^2.0.48",
+    "mongoose": "^4.2.5",
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.1.0"
+  }
+}
