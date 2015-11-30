@@ -3,3 +3,4 @@ example
 .DS_Store
 coverage
 typings
+bower_components
