@@ -19,3 +19,9 @@
 
 ##### 日志
 - [winston](https://github.com/winstonjs/winston)
+
+##### 图表
+- [echart](http://echarts.baidu.com)
+
+##### 公共API库
+- [pm2.5](http://www.pm25.in)
