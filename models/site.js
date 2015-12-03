@@ -1,25 +1,12 @@
-var mongodb = require('./mongodb');
-var Schema = mongodb.mongoose.Schema;
-var SiteSchema = new Schema({
-    name : String,
-    alias : [String],
-    publish : Date,
-    create_date : { type: Date, default: Date.now},
-    images :{
-        coverSmall:String,
-        coverBig:String,
-    },
-    source :[{
-        source:String,
-        link:String,
-        swfLink:String,
-        quality:String,
-        version:String,
-        lang:String,
-        subtitle:String,
-        create_date : { type: Date, default: Date.now }
-    }]
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var UserSchema = new Schema({
+    email: String,
+    password: String,
+	phone: Number,
+	name: String,
+    token: String
 });
-var siteModel = mongodb.mongoose.model("Site", SiteSchema);
-var siteDAO = function(){};
-module.exports = new siteDAO();
+
+module.exports = mongoose.model('User', UserSchema);
