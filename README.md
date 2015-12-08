@@ -25,3 +25,7 @@
 
 ##### 公共API库
 - [pm2.5](http://www.pm25.in)
+
+##### 参考框架
+- [ghost](https://www.ghost.org)
+- [mean.io](http://www.mean.io)
