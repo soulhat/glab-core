@@ -1,9 +1,10 @@
 'use strict';
 
-var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
-var mocha = require('gulp-mocha');
-
+var gulp = require('gulp'),
+    browserSync = require('browser-sync').create(),
+    mocha = require('gulp-mocha'),
+    env = process.env.NODE_ENV || 'development';
+require('require-dir')('./gulp');
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -17,4 +18,6 @@ gulp.task('test', function () {
         // gulp-mocha needs filepaths so you can't have any plugins before it
         .pipe(mocha({reporter: 'nyan'}));
 })
-gulp.task('default', ['test']);
+gulp.task('default', function (defaultTasks){
+    gulp.start(env);
+});
