@@ -1,13 +1,10 @@
 'use strict';
 
 var gulp = require('gulp'),
-	coffee = require('gulp-coffee'),
-	gutil = require('gulp-util'),
 	through = require('through'),
 	plugins = require('gulp-load-plugins')({
 		DEBUG: true,
 		pattern: ['gulp-*', 'gulp.*'],
-		
 		scope: ['dependencies', 'devDependencies'],
 		replaceString: /^gulp(-|\.)/,
 		camelize: true,
@@ -16,14 +13,19 @@ var gulp = require('gulp'),
 	}),
 	paths = {
 		coffee: ['controllers/**/*.coffee'],
-		js: ['config/**/*.js']
+		js: ['config/**/*.js'],
+		css: ['static/**/*.css']
 	};
 
-var defaultTasks = ['coffee', 'jshint', 'watch'];
+var defaultTasks = ['coffee', 'jshint', 'csslint', 'watch'];
+
+gulp.task('env:development', function(){
+	process.env.NODE_ENV = 'development';
+});
 
 gulp.task('coffee', function(){
 	gulp.src(paths.coffee)
-		.pipe(coffee({bare: true}).on('error', gutil.log))
+		.pipe(plugins.coffee({bare: true}).on('error', plugins.util.log))
 		.pipe(gulp.dest('./controllers'));
 });
 
@@ -34,8 +36,17 @@ gulp.task('jshint', function(){
 		.pipe(count('jshint', 'files lint free'));
 });
 
+gulp.task('csslint', function () {
+	return gulp.src(paths.css)
+		.pipe(plugins.csslint('.csslintrc'))
+		.pipe(plugins.csslint.reporter())
+		.pipe(count('csslint', 'files lint free'));
+});
+
 gulp.task('watch', function(){
 	gulp.watch(paths.coffee, ['coffee']);
+	gulp.watch(paths.js, ['jshint']);	
+	gulp.watch(paths.css, ['csshint']).on('change', plugins.livereload.changed);
 });
 
 function count(taskName, message) {
@@ -44,7 +55,7 @@ function count(taskName, message) {
 		fileCount++;
 	}
 	function endStream(){
-		gutil.log(gutil.colors.cyan(taskName + ': ') + fileCount + ' ' + message || 'files processed.');
+		plugins.util.log(plugins.util.colors.cyan(taskName + ': ') + fileCount + ' ' + message || 'files processed.');
 		this.emit('end');
 	}
 	return through(countFiles, endStream);
