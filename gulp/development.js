@@ -14,10 +14,12 @@ var gulp = require('gulp'),
 	paths = {
 		coffee: ['controllers/**/*.coffee'],
 		js: ['config/**/*.js'],
-		css: ['static/**/*.css']
+		css: ['static/**/*.css'],
+		less: ['static/**/*.less'],
+		sass: ['static/**/*.sass']
 	};
 
-var defaultTasks = ['coffee', 'jshint', 'csslint', 'watch'];
+var defaultTasks = ['coffee', 'jshint', 'csslint', 'less', 'watch'];
 
 gulp.task('env:development', function(){
 	process.env.NODE_ENV = 'development';
@@ -43,10 +45,17 @@ gulp.task('csslint', function () {
 		.pipe(count('csslint', 'files lint free'));
 });
 
+gulp.task('less', function () {
+	return gulp.src(paths.less)
+		.pipe(plugins.less())
+		.pipe(gulp.dest('./static/css'));
+});
+
 gulp.task('watch', function(){
 	gulp.watch(paths.coffee, ['coffee']);
 	gulp.watch(paths.js, ['jshint']);	
 	gulp.watch(paths.css, ['csshint']).on('change', plugins.livereload.changed);
+	gulp.watch(paths.less, ['less']);
 });
 
 function count(taskName, message) {
