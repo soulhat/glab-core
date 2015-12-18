@@ -1,5 +1,5 @@
 'use strict';
-
+// gulp setting
 var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     mocha = require('gulp-mocha'),
