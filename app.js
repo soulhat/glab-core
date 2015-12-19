@@ -14,7 +14,9 @@ app.set('views', path.join(__dirname, 'views'));
 // middleware
 app.use(express.static(path.join(__dirname, 'public')));// 静态目录
 app.use(favicon(__dirname + '/static/favicon.ico'));// favicon
-
+app.use(express.logger('dev'));
+app.use(express.bodyParser());
+app.use(express.methodOverride());
 app.use(routes);
 
 
