@@ -7,18 +7,32 @@ var path = require('path');
 var routes = require('./routes');
 var app = express();
 
-app.engine('html', cons.handlebars);
-app.set('view engine', 'html');
-app.set('views', path.join(__dirname, 'views'));
 
-// middleware
-app.use(express.static(path.join(__dirname, 'public')));// 静态目录
-app.use(favicon(__dirname + '/static/favicon.ico'));// favicon
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(routes);
+app.configure(function () {
+    app.engine('html', cons.handlebars);
+    app.set('view engine', 'html');
+    app.set('views', path.join(__dirname, 'views'));
+    // middleware
+    app.use(express.static(path.join(__dirname, 'public')));// 静态目录
+    app.use(favicon(__dirname + '/static/favicon.ico'));// favicon
+    app.use(express.logger('dev'));
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(routes);
+});
 
+app.configure('development', function () {
+    app.engine('html', cons.handlebars);
+    app.set('view engine', 'html');
+    app.set('views', path.join(__dirname, 'views'));
+    // middleware
+    app.use(express.static(path.join(__dirname, 'public')));// 静态目录
+    app.use(favicon(__dirname + '/static/favicon.ico'));// favicon
+    app.use(express.logger('dev'));
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(routes);
+});
 
 // 如果有任何错误都会设置成 404错误
 app.use(function(req, res, next) {
