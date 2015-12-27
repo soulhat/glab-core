@@ -9,3 +9,4 @@ var rewire = require("rewire");
 var express = require("express");
 var request = require("supertest");
 var app = express();
+var test = express();
