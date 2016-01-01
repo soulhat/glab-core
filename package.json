@@ -74,6 +74,7 @@
     "mongodb": "^2.0.48",
     "mongoose": "^4.2.5",
     "serve-favicon": "^2.3.0",
+    "walkway.js": "0.0.5",
     "winston": "^2.1.0"
   }
 }
