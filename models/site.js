@@ -6,5 +6,5 @@ var UserSchema = new Schema({
     url: String,
     slug: String,
 	label: Number,
-	age: String
+	age: Number
 });
