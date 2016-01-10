@@ -6,5 +6,7 @@ var UserSchema = new Schema({
     url: String,
     description: String,
     slug: String,
-    label: String
+    label: String,
+    rank: Number,
+    click: Number
 });
