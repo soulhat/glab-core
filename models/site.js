@@ -8,5 +8,6 @@ var UserSchema = new Schema({
     slug: String,
     label: String,
     rank: Number,
-    click: Number
+    click: Number,
+    score: Number
 });
