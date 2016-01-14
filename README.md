@@ -1,4 +1,4 @@
-## Glab 网址导航
+## Glab 基于云端部署，大数据分析的个性化网址导航系统
 技术栈
 [Node.js](https://nodejs.org) + [MongoDB](http://www.mongodb.org) + [Angular.js](https://angularjs.org) + [Express](http://expressjs.com)
 
