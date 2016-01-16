@@ -3,6 +3,8 @@
 [Node.js](https://nodejs.org) + [MongoDB](http://www.mongodb.org) + [Angular.js](https://angularjs.org) + [Express](http://expressjs.com)
 
 #### 使用的第三方NPM包
+- faker
+- autoprefixer
 #### openstack
 #### spark
 ##### 模版扩展
