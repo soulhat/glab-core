@@ -5,6 +5,8 @@
 #### 使用的第三方NPM包
 - faker
 - autoprefixer
+- gulp-sass
+- gulp-px3rem
 #### openstack
 #### spark
 ##### 模版扩展
