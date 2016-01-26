@@ -1,7 +1,8 @@
-http://sports.sina.com.cn/nba/ 'use strict';
+'use strict';
 
 var gulp = require('gulp'),
 	through = require('through'),
+    babel = require('gulp-babel'),
 	plugins = require('gulp-load-plugins')({
 		DEBUG: true,
 		pattern: ['gulp-*', 'gulp.*'],
@@ -56,6 +57,13 @@ gulp.task('watch', function(){
 	gulp.watch(paths.js, ['jshint']);	
 	gulp.watch(paths.css, ['csshint']).on('change', plugins.livereload.changed);
 	gulp.watch(paths.less, ['less']);
+});
+gulp.task('babel', function(){
+	return gulp.src('src/app.js')
+		.pipe(babel({
+			presets: ['es2015']
+		}))
+		.pipe(gulp.dest('dist'));
 });
 
 function count(taskName, message) {
