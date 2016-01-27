@@ -83,6 +83,7 @@
     "lodash": "^3.10.1",
     "mongodb": "^2.0.48",
     "mongoose": "^4.2.5",
+    "nodemailer": "^2.0.0",
     "rx": "^4.0.7",
     "serve-favicon": "^2.3.0",
     "walkway.js": "0.0.5",
