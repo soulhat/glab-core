@@ -80,6 +80,7 @@
     "bluebird": "^3.0.5",
     "consolidate": "^0.13.1",
     "express": "^4.13.3",
+    "gm": "^1.21.1",
     "handlebars": "^4.0.4",
     "lodash": "^3.10.1",
     "mongodb": "^2.0.48",
