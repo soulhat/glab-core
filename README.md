@@ -8,7 +8,7 @@
 - gulp-sass
 - gulp-px3rem
 
-#### openstack
+#### 阿里云sdk
 #### spark
 ##### 模版扩展
 - [consolidate](https://github.com/visionmedia/consolidate.js)
