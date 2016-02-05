@@ -77,6 +77,7 @@
     "zone.js": "0.5.10"
   },
   "dependencies": {
+    "ali-oss": "^4.1.4",
     "bluebird": "^3.0.5",
     "consolidate": "^0.13.1",
     "express": "^4.13.3",
