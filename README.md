@@ -10,6 +10,7 @@
 
 #### 阿里云sdk
 - ali-oss
+- ali-ecs
 
 #### spark
 ##### 模版扩展
