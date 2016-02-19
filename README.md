@@ -1,4 +1,5 @@
 ## Glab 基于云端部署，大数据分析的个性化网址导航系统[![Inline docs](http://inch-ci.org/github/glabcn/glab-core.svg?branch=master)](http://inch-ci.org/github/glabcn/glab-core)
+[![Code Climate](https://codeclimate.com/github/glabcn/glab-core/badges/gpa.svg)](https://codeclimate.com/github/glabcn/glab-core) [![Test Coverage](https://codeclimate.com/github/glabcn/glab-core/badges/coverage.svg)](https://codeclimate.com/github/glabcn/glab-core/coverage) [![Issue Count](https://codeclimate.com/github/glabcn/glab-core/badges/issue_count.svg)](https://codeclimate.com/github/glabcn/glab-core)
 技术栈
 [Node.js](https://nodejs.org) + [MongoDB](http://www.mongodb.org) + [Angular.js](https://angularjs.org) + [Express](http://expressjs.com)
 
