@@ -79,6 +79,7 @@
   "dependencies": {
     "ali-oss": "^4.1.4",
     "bluebird": "^3.0.5",
+    "chalk": "^1.1.1",
     "consolidate": "^0.13.1",
     "express": "^4.13.3",
     "gm": "^1.21.1",
