@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "make test-all",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "debug": "node debug app.js"
   },
   "repository": {
     "type": "git",
