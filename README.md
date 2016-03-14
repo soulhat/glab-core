@@ -1,4 +1,4 @@
-<p align="center">## Glab 基于云端部署，大数据分析的场景网址导航系统</p>
+## Glab 基于云端部署，大数据分析的场景网址导航系统
 <p align="center">
 [![Inline docs](http://inch-ci.org/github/glabcn/glab-core.svg?branch=master)](http://inch-ci.org/github/glabcn/glab-core) [![Code Climate](https://codeclimate.com/github/glabcn/glab-core/badges/gpa.svg)](https://codeclimate.com/github/glabcn/glab-core) [![Test Coverage](https://codeclimate.com/github/glabcn/glab-core/badges/coverage.svg)](https://codeclimate.com/github/glabcn/glab-core/coverage) [![Issue Count](https://codeclimate.com/github/glabcn/glab-core/badges/issue_count.svg)](https://codeclimate.com/github/glabcn/glab-core) [![Build Status](https://travis-ci.org/glabcn/glab-core.svg?branch=master)](https://travis-ci.org/glabcn/glab-core)
 </p>
